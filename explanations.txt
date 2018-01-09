@@ -1,0 +1,15 @@
+Question 1:
+	I chose to use collections.Counter because an anagram uses each each original letter only once. So I used the Counter to "count" how many times the letter appears and I compared it to the substring. If a letter does not appear in the count, then the second input is not a substring of the orginal word. To be able to use collections.Counter, I did have to make the original string input into a hashable object, in this case an array. Since this function uses a for loop, the runtime would be O(N) since it will depend on how size of the inputs. Space is also O(N) since the size of the inputs directly affects the space required.
+Question 2:
+	I chose to use a nested for loop to create an expanding substring and checking after each letter is added whether the substring is a palindrome. Since I used nested for loops, the runtime is O(N^2) as the outer loop is O(N) and the inner loop is also be O(N). The space complexcity is O(1) since I am only storing the constant values of the  beginning and ending letter positions to produce the substring. 
+Question 3:
+	I used Kruskal's algorithm to structure my solution. The steps are: 
+		1. Sort all the edges in non-decreasing order of their weight.
+		2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If cycle is not formed, include this edge. Else, discard it.
+		3. Repeat step#2 until there are (V-1) edges in the spanning tree.
+
+	Sorting the edges takes O(ElogE) time, and checking for cycles and including the edges takes O(logV) since we are using iteration. So overall time complexity is O(ElogE + ElogV). However, the overall time complexity can be further reduced to O(Elog(V)) since the value of E can be at most O(V^2) so O(LogV) and O(logE) are the same.
+Question 4:
+	In the worst case scenario, the entire depth of the binary tree will have to be traversed so the time complexity will be O(log(n)). The space complexity is O(1) because we only keep track of the current node at each traversal stage. 
+Question 5:
+	My solution traverses through the linked list twice. The run time will be O(N) for traversals. Since we only the length of linked list, the space complexity will also be O(N).  
